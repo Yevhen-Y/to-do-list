@@ -1,0 +1,91 @@
+body {
+    margin: 0 auto;
+    background-color: #96cfc4;
+    font-family: Tahoma;
+}
+.content {
+    width: 100%;
+    margin: 0 auto;
+}
+form {
+    text-align: center;
+    max-width: 600px;
+    padding: 5px 10px;
+    margin: 0 auto;
+}
+header {
+    text-align: center;
+    padding: 15px 0px;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #cbe7e2;
+}
+input[type=text] {
+    width: 100%;
+    padding: 10px 0px;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+input[type=submit] {
+    margin: 10px 0px;
+    height: 37px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e9aa95;
+    color: white;
+}
+input[type=submit]:hover {
+    background-color: #dc7756;
+    color: white;
+}
+.cardListContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    color: white;
+}
+.sortListButton {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 15px 0px;
+    text-align: center;
+}
+.sortListButton button {
+    border: none;
+    border-radius: 5px;
+    background-color: #e9aa95;
+    color: white;
+    height: 25px;
+}
+.sortListButton button:hover {
+    background-color: #dc7756;
+}
+.cardListByIndex,
+.cardListByTitle {
+    position: relative;
+    padding: 20px 3px 10px 3px;
+    word-wrap: break-word;
+    border-bottom: 2px solid white;
+}
+.cardListByIndex:hover,
+.cardListByTitle:hover {
+    background-color: #add9d1;
+}
+.deleteCardButton {
+    position: absolute;
+    top: 3px;
+    right: 2px;
+    margin-bottom: 10px;
+}
+.deleteCardButton:hover {
+    cursor: pointer;
+    color: #dc7756;
+}
+.material-icons {
+    font-size: 20px;
+}
+.cardListByTitle {
+    display: none;
+}
+.cardListByIndex {}

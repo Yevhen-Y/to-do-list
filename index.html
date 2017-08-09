@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TODO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/myStyle.css">
+</head>
+
+<body ng-app="todoApp" ng-controller="todoCtrl">
+    <header>ToDo List</header>
+    <div class="content">
+
+        <form ng-submit="todoAdd()">
+            <input type="text" ng-model="todoInput" maxlength="100" placeholder=" Add New..." required>
+            <input type="submit" value="Add New">
+        </form>
+
+        <div class='cardListContainer'>
+            <div class="cardListByIndex" ng-repeat="t in todoList track by $index">{{ t.title }}
+                <div class="deleteCardButton">
+                    <i class="material-icons" ng-click="delete()">clear</i>
+                </div>
+            </div>
+            <div class="cardListByTitle" ng-repeat="t in todoList | orderBy: 'title'" )>{{ t.title }}
+                <div class="deleteCardButton">
+                    <i class="material-icons" ng-click="delete()">clear</i>
+                </div>
+            </div>
+        </div>
+
+        <div class="sortListButton">
+            <button ng-click="sortByNumber()">sort by number</button>
+            <button ng-click="sortByName()">sort by name</button>
+        </div>
+    </div>
+</body>
+<script src="js/app.js"></script>
+<script src="js/Controllers/todoCtrl.js"></script>
+
+</html>
